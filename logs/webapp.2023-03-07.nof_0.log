@@ -1,0 +1,41 @@
+2023-03-07 21:42:16.490 INFO  c.i.i.InstituteManagementSystemApiApplication - Starting InstituteManagementSystemApiApplication using Java 17.0.2 with PID 12292 (C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api\target\classes started by LAP-9 in C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api)
+2023-03-07 21:42:16.493 INFO  c.i.i.InstituteManagementSystemApiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-07 21:42:17.738 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-07 21:42:17.746 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-07 21:42:17.747 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-07 21:42:17.747 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-07 21:42:17.874 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-07 21:42:17.874 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1321 ms
+2023-03-07 21:42:18.911 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-07 21:42:18.934 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-07 21:42:18.951 INFO  c.i.i.InstituteManagementSystemApiApplication - Started InstituteManagementSystemApiApplication in 2.842 seconds (process running for 3.543)
+2023-03-07 22:15:41.734 INFO  c.i.i.InstituteManagementSystemApiApplication - Starting InstituteManagementSystemApiApplication using Java 17.0.2 with PID 10060 (C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api\target\classes started by LAP-9 in C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api)
+2023-03-07 22:15:41.736 INFO  c.i.i.InstituteManagementSystemApiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-07 22:15:42.703 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-07 22:15:42.715 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-07 22:15:42.717 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-07 22:15:42.717 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-07 22:15:42.828 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-07 22:15:42.828 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1045 ms
+2023-03-07 22:15:43.716 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-07 22:15:43.737 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-07 22:15:43.748 INFO  c.i.i.InstituteManagementSystemApiApplication - Started InstituteManagementSystemApiApplication in 2.335 seconds (process running for 2.972)
+2023-03-07 22:16:02.305 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-07 22:16:02.305 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-07 22:16:02.305 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-03-07 22:16:16.628 INFO  c.i.i.service.StudentService - Getting all the students
+2023-03-07 22:20:15.732 INFO  c.i.i.InstituteManagementSystemApiApplication - Starting InstituteManagementSystemApiApplication using Java 17.0.2 with PID 12248 (C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api\target\classes started by LAP-9 in C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api)
+2023-03-07 22:20:15.735 INFO  c.i.i.InstituteManagementSystemApiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-07 22:20:16.732 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-07 22:20:16.743 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-07 22:20:16.774 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-07 22:20:16.774 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-07 22:20:16.887 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-07 22:20:16.888 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1107 ms
+2023-03-07 22:20:17.234 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-07 22:20:17.322 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2023-03-07 22:20:17.728 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-07 22:20:17.736 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-07 22:20:17.801 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-07 22:20:17.820 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-07 22:20:17.830 INFO  c.i.i.InstituteManagementSystemApiApplication - Started InstituteManagementSystemApiApplication in 2.455 seconds (process running for 3.095)
