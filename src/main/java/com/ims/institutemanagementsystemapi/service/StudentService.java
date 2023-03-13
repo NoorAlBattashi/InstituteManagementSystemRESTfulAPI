@@ -32,8 +32,13 @@ public class StudentService {
      * @return a list of all students
      */
     public List<Student> getAllStudents() {
-        logger.info("Getting all the students");
-        return listOfStudents;
+        try {
+            logger.info("Getting all the students");
+            return listOfStudents;
+        } catch (Exception e) {
+            logger.error("Error occurred while getting all students: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -43,15 +48,23 @@ public class StudentService {
      * @return the student object associated with the id, or null if no such student exists
      */
     public Student getStudent(int id) {
-        Optional<Student> foundStudent = listOfStudents.stream().filter(
-                (currentStudent) -> {
-                    return currentStudent.id == id;
-                }
-        ).findFirst();
-        logger.info("Getting the student with the id: " + id);
-        return foundStudent.orElse(null);
-
-
+        try {
+            Optional<Student> foundStudent = listOfStudents.stream().filter(
+                    (currentStudent) -> {
+                        return currentStudent.id == id;
+                    }
+            ).findFirst();
+            if (foundStudent.isPresent()) {
+                logger.info("Getting the student with the id: " + id);
+                return foundStudent.get();
+            } else {
+                logger.error("Error occurred while getting Student: Student with id " + id + " not found");
+                return null;
+            }
+        } catch (Exception e) {
+            logger.error("Error occurred while getting Student: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -61,10 +74,15 @@ public class StudentService {
      * @return the student object that was added to the system, including its generated unique id
      */
     public Student createStudent(Student currStudent) {
-        currStudent.id = this.currId++;
-        listOfStudents.add(currStudent);
-        logger.info("Created student with the id: " + currStudent.id);
-        return currStudent;
+        try {
+            currStudent.id = this.currId++;
+            listOfStudents.add(currStudent);
+            logger.info("Created student with the id: " + currStudent.id);
+            return currStudent;
+        } catch (Exception e) {
+            logger.error("Error occurred while creating Student: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -75,11 +93,16 @@ public class StudentService {
      * @return the updated student object
      */
     public Student updateStudent(int id, Student upToDateStudent) {
-        Student foundStudent = getStudent(id);
-        foundStudent.name = upToDateStudent.name;
-        foundStudent.email = upToDateStudent.email;
-        logger.info("Update the student info the id: " + id);
-        return foundStudent;
+        try {
+            Student foundStudent = getStudent(id);
+            foundStudent.name = upToDateStudent.name;
+            foundStudent.email = upToDateStudent.email;
+            logger.info("Update the student info the id: " + id);
+            return foundStudent;
+        } catch (Exception e) {
+            logger.error("Error occurred while updating Student: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -88,10 +111,16 @@ public class StudentService {
      * @param id the unique id of the student to delete
      * @return the student object that was deleted from the system
      */
-    public Student deleteStudent(int id) {
+    public Student deleteStudent(int id) throws Exception {
         Student foundStudent = getStudent(id);
-        listOfStudents.remove(foundStudent);
-        logger.info("Delete the student the id: " + id);
+        if (foundStudent == null) {
+            throw new Exception("Student with id " + id + " not found");
+        }
+        boolean removed = listOfStudents.remove(foundStudent);
+        if (!removed) {
+            throw new Exception("Failed to delete student with id " + id);
+        }
+        logger.info("Deleted student with id: " + id);
         return foundStudent;
     }
 }

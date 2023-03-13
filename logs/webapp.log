@@ -1,37 +1,70 @@
-2023-03-08 09:56:07.310 INFO  c.i.i.InstituteManagementSystemApiApplication - Starting InstituteManagementSystemApiApplication using Java 17.0.2 with PID 15712 (C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api\target\classes started by LAP-9 in C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api)
-2023-03-08 09:56:07.322 INFO  c.i.i.InstituteManagementSystemApiApplication - No active profile set, falling back to 1 default profile: "default"
-2023-03-08 09:56:08.667 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2023-03-08 09:56:08.678 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2023-03-08 09:56:08.680 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-03-08 09:56:08.680 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-08 09:56:08.796 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-03-08 09:56:08.796 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1380 ms
-2023-03-08 09:56:09.158 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2023-03-08 09:56:09.274 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
-2023-03-08 09:56:09.748 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2023-03-08 09:56:09.787 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2023-03-08 09:56:09.867 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2023-03-08 09:56:09.890 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-08 09:56:09.903 INFO  c.i.i.InstituteManagementSystemApiApplication - Started InstituteManagementSystemApiApplication in 3.068 seconds (process running for 3.841)
-2023-03-08 09:56:28.633 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-08 09:56:28.641 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-03-08 09:56:28.642 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
-2023-03-08 09:56:28.642 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
-2023-03-08 09:56:28.643 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
-2023-03-08 09:56:28.643 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2a82b842
-2023-03-08 09:56:28.643 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@519d808e
-2023-03-08 09:56:28.643 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2023-03-08 09:56:28.643 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2023-03-08 09:56:28.659 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/teacher", parameters={}
-2023-03-08 09:56:28.676 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.TeacherController#createTeacher(Teacher)
-2023-03-08 09:56:28.835 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.ims.institutemanagementsystemapi.model.Teacher@3a98ed93]
-2023-03-08 09:56:28.840 INFO  c.i.i.service.TeacherService - Created Teacher with the id: 1
-2023-03-08 09:56:28.871 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-03-08 09:56:28.871 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.ims.institutemanagementsystemapi.model.Teacher@3a98ed93]
-2023-03-08 09:56:28.895 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2023-03-08 09:56:32.995 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/teacher", parameters={}
-2023-03-08 09:56:32.995 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.TeacherController#getTeachers()
-2023-03-08 09:56:32.995 INFO  c.i.i.service.TeacherService - Getting all the teachers
-2023-03-08 09:56:33.011 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-03-08 09:56:33.011 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.ims.institutemanagementsystemapi.model.Teacher@3a98ed93]]
-2023-03-08 09:56:33.020 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-13 13:33:43.010 INFO  c.i.i.InstituteManagementSystemApiApplication - Starting InstituteManagementSystemApiApplication using Java 17.0.2 with PID 13248 (C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api\target\classes started by LAP-9 in C:\Users\LAP-9\Documents\MyWorkArea\IMS\institute-management-system-api\institute-management-system-api)
+2023-03-13 13:33:43.018 INFO  c.i.i.InstituteManagementSystemApiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-13 13:33:44.012 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-13 13:33:44.024 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-13 13:33:44.057 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-13 13:33:44.058 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-13 13:33:44.174 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-13 13:33:44.174 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1089 ms
+2023-03-13 13:33:44.471 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-13 13:33:44.564 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2023-03-13 13:33:45.056 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-13 13:33:45.064 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-13 13:33:45.175 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-13 13:33:45.206 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-13 13:33:45.219 INFO  c.i.i.InstituteManagementSystemApiApplication - Started InstituteManagementSystemApiApplication in 2.553 seconds (process running for 3.193)
+2023-03-13 13:34:05.681 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-13 13:34:05.682 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-13 13:34:05.683 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-13 13:34:05.683 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-13 13:34:05.683 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-13 13:34:05.684 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2dcfc44f
+2023-03-13 13:34:05.685 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@66dc61d7
+2023-03-13 13:34:05.685 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-13 13:34:05.685 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-03-13 13:34:05.704 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/student", parameters={}
+2023-03-13 13:34:05.732 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.StudentController#createStudent(Student)
+2023-03-13 13:34:05.907 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.ims.institutemanagementsystemapi.model.Student@5512c5a7]
+2023-03-13 13:34:05.923 INFO  c.i.i.service.StudentService - Created student with the id: 1
+2023-03-13 13:34:05.965 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-13 13:34:05.975 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.ims.institutemanagementsystemapi.model.Student@5512c5a7]
+2023-03-13 13:34:05.999 DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2023-03-13 13:34:12.608 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/student", parameters={}
+2023-03-13 13:34:12.610 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.StudentController#getStudents()
+2023-03-13 13:34:12.610 INFO  c.i.i.service.StudentService - Getting all the students
+2023-03-13 13:34:12.612 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-13 13:34:12.621 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.ims.institutemanagementsystemapi.model.Student@5512c5a7]]
+2023-03-13 13:34:12.622 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-13 13:34:24.257 DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/student/1", parameters={}
+2023-03-13 13:34:24.261 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.StudentController#updateStudent(int, Student)
+2023-03-13 13:34:24.262 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.ims.institutemanagementsystemapi.model.Student@46273757]
+2023-03-13 13:34:24.262 INFO  c.i.i.service.StudentService - Getting the student with the id: 1
+2023-03-13 13:34:24.267 INFO  c.i.i.service.StudentService - Update the student info the id: 1
+2023-03-13 13:34:24.269 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-13 13:34:24.270 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.ims.institutemanagementsystemapi.model.Student@5512c5a7]
+2023-03-13 13:34:24.271 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-13 13:34:28.710 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/student", parameters={}
+2023-03-13 13:34:28.710 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.StudentController#getStudents()
+2023-03-13 13:34:28.710 INFO  c.i.i.service.StudentService - Getting all the students
+2023-03-13 13:34:28.710 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-13 13:34:28.718 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.ims.institutemanagementsystemapi.model.Student@5512c5a7]]
+2023-03-13 13:34:28.718 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-13 13:34:36.638 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/student/1", parameters={}
+2023-03-13 13:34:36.646 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.StudentController#getStudent(int)
+2023-03-13 13:34:36.647 INFO  c.i.i.service.StudentService - Getting the student with the id: 1
+2023-03-13 13:34:36.647 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-13 13:34:36.647 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.ims.institutemanagementsystemapi.model.Student@5512c5a7]
+2023-03-13 13:34:36.649 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-13 13:34:41.233 DEBUG o.s.web.servlet.DispatcherServlet - DELETE "/api/student/1", parameters={}
+2023-03-13 13:34:41.234 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.StudentController#deleteStudent(int)
+2023-03-13 13:34:41.235 INFO  c.i.i.service.StudentService - Getting the student with the id: 1
+2023-03-13 13:34:41.235 INFO  c.i.i.service.StudentService - Deleted student with id: 1
+2023-03-13 13:34:41.238 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-13 13:34:41.238 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.ims.institutemanagementsystemapi.model.Student@5512c5a7]
+2023-03-13 13:34:41.240 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-13 13:34:44.290 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/student", parameters={}
+2023-03-13 13:34:44.298 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ims.institutemanagementsystemapi.controller.StudentController#getStudents()
+2023-03-13 13:34:44.299 INFO  c.i.i.service.StudentService - Getting all the students
+2023-03-13 13:34:44.299 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-13 13:34:44.299 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[]]
+2023-03-13 13:34:44.299 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

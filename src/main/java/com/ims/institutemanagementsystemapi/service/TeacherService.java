@@ -29,8 +29,13 @@ public class TeacherService {
      * @return a list of all Teachers
      */
     public List<Teacher> getAllTeachers() {
-        logger.info("Getting all the teachers");
-        return listOfTeachers;
+        try {
+            logger.info("Getting all the teachers");
+            return listOfTeachers;
+        } catch (Exception e) {
+            logger.error("Error occurred while retrieving all the teachers: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -45,10 +50,14 @@ public class TeacherService {
                     return currentTeacher.id == id;
                 }
         ).findFirst();
-        logger.info("Getting the Teacher with the id: " + id);
-        return foundTeacher.orElse(null);
 
-
+        if (foundTeacher.isPresent()) {
+            logger.info("Getting the Teacher with the id: " + id);
+            return foundTeacher.get();
+        } else {
+            logger.error("Error occurred while retrieving Teacher with id " + id + ": Teacher not found");
+            return null;
+        }
     }
 
     /**
@@ -58,10 +67,15 @@ public class TeacherService {
      * @return the created Teacher object
      */
     public Teacher createTeacher(Teacher currTeacher) {
-        currTeacher.id = this.currId++;
-        listOfTeachers.add(currTeacher);
-        logger.info("Created Teacher with the id: " + currTeacher.id);
-        return currTeacher;
+        try {
+            currTeacher.id = this.currId++;
+            listOfTeachers.add(currTeacher);
+            logger.info("Created Teacher with the id: " + currTeacher.id);
+            return currTeacher;
+        } catch (Exception e) {
+            logger.error("Error occurred while creating Teacher: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -72,11 +86,20 @@ public class TeacherService {
      * @return the updated Teacher object
      */
     public Teacher updateTeacher(int id, Teacher upToDateTeacher) {
-        Teacher foundTeacher = getTeacher(id);
-        foundTeacher.name = upToDateTeacher.name;
-        foundTeacher.email = upToDateTeacher.email;
-        logger.info("Update the Teacher info the id: " + id);
-        return foundTeacher;
+        try {
+            Teacher foundTeacher = getTeacher(id);
+            if (foundTeacher != null) {
+                foundTeacher.name = upToDateTeacher.name;
+                foundTeacher.email = upToDateTeacher.email;
+                logger.info("Updated the Teacher info with id: " + id);
+            } else {
+                logger.error("Error occurred while updating Teacher: Teacher with id " + id + " not found");
+            }
+            return foundTeacher;
+        } catch (Exception e) {
+            logger.error("Error occurred while updating Teacher: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -86,9 +109,18 @@ public class TeacherService {
      * @return the deleted Teacher object
      */
     public Teacher deleteTeacher(int id) {
-        Teacher foundTeacher = getTeacher(id);
-        listOfTeachers.remove(foundTeacher);
-        logger.info("Delete the Teacher the id: " + id);
-        return foundTeacher;
+        try {
+            Teacher foundTeacher = getTeacher(id);
+            if (foundTeacher != null) {
+                listOfTeachers.remove(foundTeacher);
+                logger.info("Deleted the Teacher with id: " + id);
+            } else {
+                logger.error("Error occurred while deleting Teacher: Teacher with id " + id + " not found");
+            }
+            return foundTeacher;
+        } catch (Exception e) {
+            logger.error("Error occurred while deleting Teacher: " + e.getMessage());
+            return null;
+        }
     }
 }
